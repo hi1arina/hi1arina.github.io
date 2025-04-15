@@ -10,16 +10,20 @@
 <body>
     <div class="page-wrapper">
 
-        <div class="ui stackable menu">
-            <div class="center menu">
-                <a class="item" href="index.html">Главная</a>
-                <a class="item" href="types.html">Виды хостинга</a>
-                <a class="item" href="comparison.html">Сравнение</a>
-                <a class="item" href="choose.html">Как выбрать</a>
-                <a class="item" href="hosting-review.html">Обзор</a>
-                <a class="item" href="steps.html">Шаги</a>
-                <a class="item active" href="resources.html">Ресурсы</a>
-                <a class="item" href="short.html">Кратко</a>
+
+        <div class="mobile-menu-container">
+            <button class="menu-toggle" aria-label="Открыть меню">&#9776;</button>
+            <div class="ui stackable menu">
+                <div class="center menu">
+                    <a class="item" href="index.html">Главная</a>
+                    <a class="item" href="types.html">Виды хостинга</a>
+                    <a class="item" href="comparison.html">Сравнение</a>
+                    <a class="item" href="choose.html">Как выбрать</a>
+                    <a class="item" href="hosting-review.html">Обзор</a>
+                    <a class="item" href="steps.html">Шаги</a>
+                    <a class="item active" href="resources.html">Ресурсы</a>
+                    <a class="item" href="short.html">Кратко</a>
+                </div>
             </div>
         </div>
 
@@ -114,6 +118,18 @@
                 © 2025
             </div>
         </footer>
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const toggleButton = document.querySelector(".menu-toggle");
+              const menu = document.querySelector(".ui.stackable.menu");
+          
+              toggleButton.addEventListener("click", () => {
+                menu.classList.toggle("show");
+              });
+            });
+        </script>
 
     </div>
 </body>
