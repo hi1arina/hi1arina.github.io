@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Обзор популярных хостинг-площадок</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="page-wrapper">
+
+        <div class="ui stackable menu">
+            <div class="center menu">
+                <a class="item" href="index.html">Главная</a>
+                <a class="item" href="types.html">Виды хостинга</a>
+                <a class="item" href="comparison.html">Сравнение</a>
+                <a class="item" href="choose.html">Как выбрать</a>
+                <a class="item active" href="hosting-review.html">Обзор</a>
+                <a class="item" href="steps.html">Шаги</a>
+                <a class="item" href="resources.html">Ресурсы</a>
+                <a class="item" href="short.html">Кратко</a>
+            </div>
+        </div>
+
+        
+    
+        <h1 class="ui header center aligned" style="margin: 5rem 0;">Обзор популярных хостинг-площадок</h1>
+
+        <div class="ui stackable three column grid container">
+            
+            <div class="column">
+                <div class="ui card">
+                    
+                    <div class="content">
+                        <a class="header">Рег.ру</a>
+                        <div class="description">
+                            <p>Виртуальные и виртуальные выделенные хостинги. 
+                                Оптимизация под CMS 1С-Битрикс и WordPress. 
+                                Три дата-центра в Москве. 
+                                Тарифы от 167 рублей в месяц.</p>
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <a href="https://www.reg.ru" class="ui blue button">Перейти на сайт</a>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="column">
+                <div class="ui card">
+                    
+                    <div class="content">
+                        <a class="header">Beget.com</a>
+                        <div class="description">
+                            <p>Выделенные виртуальные или физические серверы. 
+                                Дата-центр в Санкт-Петербурге. 
+                                Бесплатный тест на 30 дней. 
+                                Тарифы от 320 рублей в месяц.</p>
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <a href="https://beget.com" class="ui blue button">Перейти на сайт</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="column">
+                <div class="ui card">
+                    
+                    <div class="content">
+                        <a class="header">Спринтхост</a>
+                        <div class="description">
+                            <p>Выделенные и виртуальные серверы. 
+                                ЦОД в Санкт-Петербурге. 
+                                Тарифы от 189 рублей в месяц.</p>
+                        </div>
+                    </div>
+                    <div class="extra content">
+                        <a href="https://sprinthost.ru/" class="ui blue button">Перейти на сайт</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ui container" style="margin-top: 50px;">
+            <h2 class="ui header center aligned">Видеообзор хостинг-площадок</h2>
+        
+            <div id="video-slider" class="ui segment" style="position: relative; text-align: center; padding: 2rem;">
+                <iframe 
+                    id="rutube-frame"
+                    width="100%" 
+                    height="500" 
+                    src="https://rutube.ru/play/embed/ab0eb3c681360e45b930a1fab7bb879b" 
+                    frameborder="0" 
+                    allowfullscreen 
+                    allow="clipboard-write; autoplay">
+                </iframe>
+        
+                <button class="ui left attached icon button" onclick="prevVideo()" style="position: absolute; top: 50%; left: -1rem; transform: translateY(-50%); z-index: 10;">
+                    <i class="left arrow icon"></i>
+                </button>
+        
+                <button class="ui right attached icon button" onclick="nextVideo()" style="position: absolute; top: 50%; right: -1rem; transform: translateY(-50%); z-index: 10;">
+                    <i class="right arrow icon"></i>
+                </button>
+            </div>
+        </div>
+        
+        <script>
+            const videoUrls = [
+                "https://rutube.ru/play/embed/ab0eb3c681360e45b930a1fab7bb879b",
+                "https://rutube.ru/play/embed/6030f2ef7a664c145994b71991c867b3",
+                "https://rutube.ru/play/embed/cc3ccdc0334e4748e2f6830e7a4ffdb8"
+            ];
+        
+            let currentIndex = 0;
+        
+            function updateVideo() {
+                const iframe = document.getElementById("rutube-frame");
+                iframe.src = videoUrls[currentIndex];
+            }
+        
+            function nextVideo() {
+                currentIndex = (currentIndex + 1) % videoUrls.length;
+                updateVideo();
+            }
+        
+            function prevVideo() {
+                currentIndex = (currentIndex - 1 + videoUrls.length) % videoUrls.length;
+                updateVideo();
+            }
+        </script>
+
+
+        
+        <div class="ui pagination menu">
+            <a class="item" href="index.html">1</a>
+            <a class="item" href="types.html">2</a>
+            <a class="item" href="comparison.html">3</a>
+            <a class="item" href="choose.html">4</a>
+            <a class="item active" href="hosting-review.html">5</a>
+            <a class="item" href="steps.html">6</a>
+            <a class="item" href="resources.html">7</a>
+            <a class="item" href="short.html">8</a>
+        </div>
+
+
+    </div>
+
+    
+    <footer class="ui inverted vertical footer segment">
+        <div class="ui center aligned container">
+            © 2025
+        </div>
+    </footer>
+</body>
+</html>
